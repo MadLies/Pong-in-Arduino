@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 198.23, "left": 173.45, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled1", "top": 458.12, "left": 286.4, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 449.79,
+      "left": 457.57,
+      "attrs": { "travelLength": "30" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot2",
+      "top": 438,
+      "left": -15.87,
+      "attrs": { "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "oled1:SDA", "uno:A4", "green", [ "v-13.37", "h44.66", "v115.52" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-18.54", "h63.11", "v134.49" ] ],
+    [ "uno:5V", "oled1:VCC", "red", [ "h-8.8", "v45.55", "h9.37" ] ],
+    [ "uno:GND.2", "oled1:GND", "black", [ "h5.59", "v33.88", "h-23.97" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v-0.27", "h23.58", "v-68.35", "h-339.71" ] ],
+    [ "uno:GND.3", "uno:GND.2", "black", [ "v-2.1", "h-9.42" ] ],
+    [ "pot2:GND", "uno:GND.2", "black", [ "v-0.63", "h66.91", "v-58.78", "h85.4" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "h-55.18", "v-58", "h-73.66" ] ],
+    [ "pot2:VCC", "uno:5V", "red", [ "h-28.68", "v-48.26", "h375.33", "v2.6" ] ],
+    [ "pot2:SIG", "uno:A0", "green", [ "h-19.42", "v-92", "h270.85" ] ],
+    [ "pot1:SIG", "uno:A1", "green", [ "h-63.63", "v-126.56" ] ]
+  ]
+}
